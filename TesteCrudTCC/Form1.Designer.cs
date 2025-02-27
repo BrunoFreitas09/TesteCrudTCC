@@ -40,9 +40,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.txtAno = new System.Windows.Forms.TextBox();
-            this.txtSerie = new System.Windows.Forms.TextBox();
             this.lblAno = new System.Windows.Forms.Label();
-            this.lblSerie = new System.Windows.Forms.Label();
             this.txtEscola = new System.Windows.Forms.TextBox();
             this.lblEscola = new System.Windows.Forms.Label();
             this.pbAluno = new System.Windows.Forms.PictureBox();
@@ -114,6 +112,7 @@
             this.btnIncluir.TabIndex = 7;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // btnProcurar
             // 
@@ -149,13 +148,6 @@
             this.txtAno.Size = new System.Drawing.Size(100, 20);
             this.txtAno.TabIndex = 14;
             // 
-            // txtSerie
-            // 
-            this.txtSerie.Location = new System.Drawing.Point(314, 13);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(100, 20);
-            this.txtSerie.TabIndex = 13;
-            // 
             // lblAno
             // 
             this.lblAno.AutoSize = true;
@@ -164,15 +156,6 @@
             this.lblAno.Size = new System.Drawing.Size(26, 13);
             this.lblAno.TabIndex = 12;
             this.lblAno.Text = "Ano";
-            // 
-            // lblSerie
-            // 
-            this.lblSerie.AutoSize = true;
-            this.lblSerie.Location = new System.Drawing.Point(252, 16);
-            this.lblSerie.Name = "lblSerie";
-            this.lblSerie.Size = new System.Drawing.Size(31, 13);
-            this.lblSerie.TabIndex = 11;
-            this.lblSerie.Text = "Série";
             // 
             // txtEscola
             // 
@@ -207,9 +190,7 @@
             this.Controls.Add(this.txtEscola);
             this.Controls.Add(this.lblEscola);
             this.Controls.Add(this.txtAno);
-            this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.lblAno);
-            this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnProcurar);
@@ -223,6 +204,7 @@
             this.Controls.Add(this.lblAluno);
             this.Name = "frmUsuarios";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).EndInit();
             this.ResumeLayout(false);
@@ -244,9 +226,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox txtAno;
-        private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Label lblAno;
-        private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.TextBox txtEscola;
         private System.Windows.Forms.Label lblEscola;
         private System.Windows.Forms.PictureBox pbAluno;
