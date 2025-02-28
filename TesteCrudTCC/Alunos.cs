@@ -11,15 +11,22 @@ namespace TesteCrudTCC.Models
     {
         public int id { get; set; }
         public string nome { get; set; }
-        public int curso { get; set; }
+        public string curso { get; set; }   
         public DateTime ano { get; set; }
         public string escola { get; set; }
+
+        public double rm { get; set; }
 
 
         public void Incluir()
         {
             try
             {
+
+                if (Banco.Conexao == null)
+                {
+                    Banco.Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau; DATABASE =testetcc");
+                }
                 Banco.Conexao.Open();
                 Banco.Comando = new MySqlCommand("INSERT INTO Alunos(nome,curso,ano, escola) " +
                     "VALUES (@nome, @curso, @ano, @escola)", Banco.Conexao);
@@ -74,6 +81,7 @@ namespace TesteCrudTCC.Models
         {
             try
             {
+                //Tem que arrumar ess a consulta dps!!
                 Banco.Comando = new MySqlCommand("SELECT al.*, ci.nome cidade, " +
                                                  "ci.uf FROM clientes cl INNER JOIN Cidades ci on (ci.id = cl.idCidade) " +
                                                  "WHERE cl.nome LIKE ?Nome ORDER BY cl.nome", Banco.Conexao);

@@ -24,7 +24,7 @@ namespace TesteCrudTCC
                 try
                 {
                     //Estabelece os parâmetros para a conexão com o banco
-                    Conexao = new MySqlConnection("server=localhost;port=3306;uid=root;pwd=etecjau; DATABASE =vendas");
+                    Conexao = new MySqlConnection("server=localhost;port=3306;uid=root;pwd=etecjau; DATABASE =testetcc");
 
                     //Abre a conexão com o banco de dados 
                     Conexao.Open();
@@ -47,7 +47,7 @@ namespace TesteCrudTCC
                     Abrirconexao();
 
                     //Informa a instrução SQL
-                    Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS Alunos; USE Alunos;", Conexao);
+                    Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS TesteTcc; USE testetcc;", Conexao);
                     //Executa a query no MySQL (é o raínho do banco)
                     Comando.ExecuteNonQuery();
 
@@ -106,7 +106,8 @@ namespace TesteCrudTCC
 
             private void frmMenu_Load(Object sender, EventArgs e)
             {
-                Banco.CriarBanco();
+            //se der erro no banco pode ser por causa disso
+                Bancoo.CriarBanco();
             }
 
             }

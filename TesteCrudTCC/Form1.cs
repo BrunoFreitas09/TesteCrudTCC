@@ -14,16 +14,47 @@ namespace TesteCrudTCC
 {
     public partial class frmUsuarios : Form
     {
-
+        Alunos A;
         private Alunos alunos;
         public frmUsuarios()
         {
             InitializeComponent();
         }
 
+         void LimpaControles()
+        {
+            
+            txtCurso.Clear();
+            txtEscola.Clear();
+            txtNome.Clear();
+            txtrm.Clear();
+        }
+        void carregarGrid(string pesquisa)
+        {
+            A = new Alunos()
+            {
+                nome = pesquisa
+            };
+            dgvAlunos.DataSource = A.Consultar();
+        }
         private void btnIncluir_Click(object sender, EventArgs e)
         {
+            if (txtNome.Text == String.Empty) return;
 
+            A = new Alunos()
+            {
+                nome = txtNome.Text,
+                curso = txtCurso.Text,
+                escola = txtEscola.Text,
+                ano = dtpAno.Value,
+                rm = double.Parse(txtrm.Text),
+                
+
+            };
+            A.Incluir();
+
+            LimpaControles();
+            carregarGrid("");
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)

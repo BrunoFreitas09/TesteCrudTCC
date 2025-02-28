@@ -33,17 +33,17 @@
             this.lblRM = new System.Windows.Forms.Label();
             this.lblCurso = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtRM = new System.Windows.Forms.TextBox();
+            this.txtrm = new System.Windows.Forms.TextBox();
             this.txtCurso = new System.Windows.Forms.TextBox();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.txtAno = new System.Windows.Forms.TextBox();
             this.lblAno = new System.Windows.Forms.Label();
             this.txtEscola = new System.Windows.Forms.TextBox();
             this.lblEscola = new System.Windows.Forms.Label();
             this.pbAluno = new System.Windows.Forms.PictureBox();
+            this.dtpAno = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).BeginInit();
             this.SuspendLayout();
@@ -90,12 +90,12 @@
             this.txtNome.Size = new System.Drawing.Size(100, 20);
             this.txtNome.TabIndex = 4;
             // 
-            // txtRM
+            // txtrm
             // 
-            this.txtRM.Location = new System.Drawing.Point(101, 55);
-            this.txtRM.Name = "txtRM";
-            this.txtRM.Size = new System.Drawing.Size(100, 20);
-            this.txtRM.TabIndex = 5;
+            this.txtrm.Location = new System.Drawing.Point(101, 55);
+            this.txtrm.Name = "txtrm";
+            this.txtrm.Size = new System.Drawing.Size(100, 20);
+            this.txtrm.TabIndex = 5;
             // 
             // txtCurso
             // 
@@ -141,13 +141,6 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // txtAno
-            // 
-            this.txtAno.Location = new System.Drawing.Point(314, 51);
-            this.txtAno.Name = "txtAno";
-            this.txtAno.Size = new System.Drawing.Size(100, 20);
-            this.txtAno.TabIndex = 14;
-            // 
             // lblAno
             // 
             this.lblAno.AutoSize = true;
@@ -181,22 +174,29 @@
             this.pbAluno.TabIndex = 17;
             this.pbAluno.TabStop = false;
             // 
+            // dtpAno
+            // 
+            this.dtpAno.Location = new System.Drawing.Point(314, 52);
+            this.dtpAno.Name = "dtpAno";
+            this.dtpAno.Size = new System.Drawing.Size(100, 20);
+            this.dtpAno.TabIndex = 18;
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 654);
+            this.Controls.Add(this.dtpAno);
             this.Controls.Add(this.pbAluno);
             this.Controls.Add(this.txtEscola);
             this.Controls.Add(this.lblEscola);
-            this.Controls.Add(this.txtAno);
             this.Controls.Add(this.lblAno);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.txtCurso);
-            this.Controls.Add(this.txtRM);
+            this.Controls.Add(this.txtrm);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblCurso);
             this.Controls.Add(this.lblRM);
@@ -219,17 +219,17 @@
         private System.Windows.Forms.Label lblRM;
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtRM;
+        private System.Windows.Forms.TextBox txtrm;
         private System.Windows.Forms.TextBox txtCurso;
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.TextBox txtAno;
         private System.Windows.Forms.Label lblAno;
         private System.Windows.Forms.TextBox txtEscola;
         private System.Windows.Forms.Label lblEscola;
         private System.Windows.Forms.PictureBox pbAluno;
+        private System.Windows.Forms.DateTimePicker dtpAno;
     }
 }
 
